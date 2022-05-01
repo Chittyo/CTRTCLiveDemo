@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/llUser"
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@color/black"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <FrameLayout
+            android:id="@+id/flLocalUser"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1" />
+
+        <FrameLayout
+            android:id="@+id/flRemoteUser"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_margin="10dp"
+            android:layout_weight="1" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/flFullscreen"
+        android:layout_width="match_parent"
+        android:layout_height="240dp" />
+
+    <LinearLayout
+        android:id="@+id/llClickArea"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llUser"
+        android:layout_marginTop="20dp"
+        android:background="@android:color/white"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tvStatusReportView"
+            android:paddingLeft="20dp"
+            android:paddingTop="5dp"
+            android:layout_width="match_parent"
+            android:textColor="@color/red"
+            android:layout_height="wrap_content"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@android:color/white"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnCloseCamera"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="#57B5F9"
+                android:text="关闭摄像头" />
+
+            <Button
+                android:id="@+id/btnCloseMic"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="#57B5F9"
+                android:text="关闭麦克风" />
+
+            <Button
+                android:id="@+id/btnSwitchCrame"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="#57B5F9"
+                android:text="切换摄像头" />
+
+            <Button
+                android:id="@+id/btnSetRoomProperties"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="#57B5F9"
+                android:text="设置房间属性"
+                android:layout_marginLeft="20dp"
+                android:visibility="gone"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/btnEndLive"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="20dp"
+                android:layout_weight="1"
+                android:background="#57B5F9"
+                android:text="下麦" />
+
+            <Button
+                android:id="@+id/btnRequestLive"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="#57B5F9"
+                android:text="上麦" />
+            <Button
+                android:id="@+id/btnLeaveRoom"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_weight="1"
+                android:background="#57B5F9"
+                android:text="离开房间"
+                android:layout_marginLeft="20dp"/>
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/rgVideoStream"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rbTinyStream"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_marginEnd="10dp"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="小视频流"
+                android:background="#57B5F9"/>
+
+            <RadioButton
+                android:id="@+id/rbBigStream"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_weight="1"
+                android:text="大视频流"
+                android:background="#57B5F9"/>
+
+        </RadioGroup>
+    </LinearLayout>
+</RelativeLayout>

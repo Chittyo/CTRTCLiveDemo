@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/etRoomId"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:hint="请输入直播房间 ID"
+        android:inputType="numberDecimal"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnStartLive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnStartLive"
+        android:layout_width="200dp"
+        android:layout_height="66dp"
+        android:layout_marginEnd="20dp"
+        android:text="开始直播"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnJoinLive"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etRoomId" />
+
+    <Button
+        android:id="@+id/btnJoinLive"
+        android:layout_width="200dp"
+        android:layout_height="66dp"
+        android:text="加入直播"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnStartLive"
+        app:layout_constraintTop_toBottomOf="@+id/etRoomId" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
